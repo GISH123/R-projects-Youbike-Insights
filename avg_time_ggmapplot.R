@@ -13,7 +13,7 @@ library(dplyr)
 df <- read.csv("201601.txt",
                sep="")
 
-register_google(key = "", write = TRUE)
+register_google(key = "AIzaSyB15Z9DEJCtKe6BzE6WkkW7qaF20jiThgg", write = TRUE)
 
 
 
@@ -39,6 +39,18 @@ ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=time_lat_and_long)
 
 t_clean <-time_lat_and_long[time_lat_and_long$Sec < 20000,]
 ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=t_clean)
+
+
+
+#now plot by "return_sta"
+slatlong$return_sta <- station_names
+slatlong$return_sta<- str_sub(slatlong$return_sta,8,-1) # trim out "Taiwan" characters
+time_lat_and_long_2 <- merge(slatlong,avgtime_data,by.x="return_sta")
+t2_clean <-time_lat_and_long[time_lat_and_long$Sec < 20000,]
+
+
+ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=t2_clean)
+
 
 
 write.table(s_lat_and_long,file=".csv",sep=",")
