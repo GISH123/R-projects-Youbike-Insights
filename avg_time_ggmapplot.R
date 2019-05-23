@@ -13,7 +13,7 @@ library(dplyr)
 df <- read.csv("201601.txt",
                sep="")
 
-register_google(key = "AIzaSyB15Z9DEJCtKe6BzE6WkkW7qaF20jiThgg", write = TRUE)
+register_google(key = "", write = TRUE)
 
 
 
