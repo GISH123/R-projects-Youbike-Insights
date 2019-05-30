@@ -23,9 +23,9 @@ ggmap(map)
 
 
 
-slatlong <- read.csv("station name with lat and long.csv")
+slatlong <- read.csv("station name with lat and long(ver last).csv")
 library(stringr)
-slatlong$rent_sta<- str_sub(slatlong$rent_sta,8,-1) # trim out "Taiwan" characters
+slatlong$rent_sta<- str_sub(slatlong$rent_sta,15,-1) # trim out "Taiwan" characters
 
 avgtime_data <- read.csv("C:/Users/willy/Desktop/ntu mba/grade 1 semester two/multivariate analysis/QBS group project/avg_time.csv")
 
@@ -54,3 +54,5 @@ ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=t2_clean)
 
 
 write.table(s_lat_and_long,file=".csv",sep=",")
+
+

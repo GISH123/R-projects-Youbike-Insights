@@ -11,7 +11,7 @@ df <- read.csv("C:/Users/willy/Desktop/ntu mba/grade 1 semester two/multivariate
 
 #TO MAKE SURE THIS GOOGLEMAP TO FIND THE RIGHT PLACE, I ADD TAIWAN FOR EACH STATION NAME
 df2 <- df
-df2$rent_sta <- lapply(df2$rent_sta, function(x) paste("Taiwan", x, sep = " "))
+df2$rent_sta <- lapply(df2$rent_sta, function(x) paste("Taiwan Taipei", x, sep = " "))
 
 
 
@@ -19,7 +19,7 @@ df2$rent_sta <- lapply(df2$rent_sta, function(x) paste("Taiwan", x, sep = " "))
 
 #find all station names in data and its lat and long
 station_names <- unique(df2$rent_sta)
-#lat_and_long <- geocode('Taiwan Xingya Jr. High School')
+#lat_and_long <- geocode('Taiwan Taipei Xingya Jr. High School')
 lat_and_long = data.frame()
 
 
@@ -43,4 +43,4 @@ for (i in station_names){
 }
 
 
-write.table(s_lat_and_long,file="station name with lat and long.csv",sep=",")
+write.table(s_lat_and_long,file="station name with lat and long ver2.csv",sep=",",row.names = F)
