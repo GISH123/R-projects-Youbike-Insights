@@ -10,4 +10,6 @@ plot netflow with animations(by time)
 # avg_time_plot
 plot avg time per station
 
-
+# lat_and_long 站點名稱經緯度轉換  
+ggmap needs latitude and longitude to plot, so we need to get each station's lat and long first
+my lat_and_long.R does that
