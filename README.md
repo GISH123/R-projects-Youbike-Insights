@@ -3,9 +3,11 @@ Uses 2016/1 Youbike data,trying to know the insights of deploying the youbike bi
 
 Uses ggmap package to plot on the google map(Taiwan)
 
+# netflow plot   *主要重點* 詳細看netflow資料夾
+plot netflow with animations(by time)
+
 
 # avg_time_plot
 plot avg time per station
 
-# netflow.gif
-plot netflow with animations(by time)
+
