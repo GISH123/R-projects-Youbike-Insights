@@ -44,17 +44,29 @@ ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=t_clean)
 
 
 
-#now plot by "return_sta"
-slatlong$return_sta <- station_names
-slatlong$return_sta<- str_sub(slatlong$return_sta,8,-1) # trim out "Taiwan" characters
-time_lat_and_long_2 <- merge(slatlong,avgtime_data,by.x="return_sta")
-t2_clean <-time_lat_and_long[time_lat_and_long$Sec < 20000,]
 
 
-ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=t2_clean)
+#plot count
+ggmap(map)+geom_point(aes(x=lat,y=long,size=Count),data=time_lat_and_long,color = 'blue')+
+  scale_size_continuous(range = c(1,6), 
+                        breaks = c(50, 100, 150, 200,250,300)) +labs(size = '借出車數(一月total)')
 
 
 
-write.table(s_lat_and_long,file=".csv",sep=",")
+
+
+
+
+# 
+# #now plot by "return_sta"
+# slatlong$return_sta <- station_names
+# slatlong$return_sta<- str_sub(slatlong$return_sta,8,-1) # trim out "Taiwan" characters
+# time_lat_and_long_2 <- merge(slatlong,avgtime_data,by.x="return_sta")
+# t2_clean <-time_lat_and_long[time_lat_and_long$Sec < 20000,]
+# 
+# 
+# ggmap(map)+geom_point(aes(x=lat,y=long,size=Sec),data=t2_clean)
+# 
+
 
 
