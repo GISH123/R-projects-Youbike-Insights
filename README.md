@@ -1,3 +1,11 @@
+## Presentation of our group project : link via YouTube(Sorry for bad english)
+
+
+If you have any questions or want to know more, please contact me via willyshao514@gmail.com Thank you!
+
+
+## My part of the project:
+
 # R-projects-Youbike-Insights
 Uses 2016/1 Youbike data,trying to know the insights of deploying the youbike bicycles OR knowing the revenues from each station
 
