@@ -11,14 +11,14 @@ Uses 2016/1 Youbike data,trying to know the insights of deploying the youbike bi
 
 Uses ggmap package to plot on the google map(Taiwan)
 
-# netflow plot   *主要重點* 詳細看netflow資料夾
-plot netflow with animations(by time)
+# netflow plot   *Main Deliverable* 詳細看netflow資料夾 動態顯示每天站點淨流量變化
+Uses ggmap and gganimate function to show the netflow of stations by time(day)
 
 
 # avg_time_plot
 plot avg time per station
 
 # lat_and_long 站點名稱經緯度轉換  
-ggmap needs latitude and longitude to plot, so we need to get each station's lat and long first  
+ggmap needs latitude and longitude to plot, so we need to get each station's lat and long first.
 
-my lat_and_long.R does that
+My lat_and_long.R does that.
