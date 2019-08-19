@@ -1,4 +1,4 @@
-## Presentation of our group project : link via YouTube(Sorry for bad spoken english)
+## Presentation of our group project : link via YouTube(Sorry for badly spoken english)
 https://youtu.be/GJjb9Qj40eI
 
 If you have any questions or want to know more, please contact me via willyshao514@gmail.com Thank you!
